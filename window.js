@@ -4,7 +4,9 @@ var castFix = '* { background-size: cover !important } ' +
 
 webview.addEventListener('loadstop', function() {
   webview.insertCSS({ code: castFix }, function() {    
-    document.body.addEventListener('mousemove', function() {  
+    chrome.app.window.current().show();
+    chrome.app.window.current().fullscreen();
+    document.body.addEventListener('mouseup', function() {
       chrome.app.window.current().close();
     });
   });
