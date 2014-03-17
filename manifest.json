@@ -1,0 +1,16 @@
+{
+  "name": "Webview Screensaver",
+  "short_name": "Screensaver",
+  "description": "Displays a fullscreen picture after one minute of inactivity.",
+  "version": "1.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [ "idle", "system.display", "webview" ]
+}
